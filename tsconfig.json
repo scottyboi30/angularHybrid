@@ -1,0 +1,29 @@
+{
+  // "compilerOptions": {
+  //   "target": "ES5",
+  //   "sourceMap": true,
+  //   "module": "commonjs",
+  //   "moduleResolution": "node",
+  //   "emitDecoratorMetadata": true,
+  //   "experimentalDecorators": true,
+  //   "removeComments": false,
+  //   "lib": ["es2017", "dom"]
+  // },
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2015",
+    "outDir": "transpiled/app",
+    "declaration": false,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "lib": ["es2017", "dom"]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
