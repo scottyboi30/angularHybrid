@@ -11,6 +11,7 @@ import { UnreviewedTalkComponent} from "./home/unreviewedTalk.component";
 import { TalkDurationPipe } from './shared/pipes/talkDuration.pipe';
 import { ProfileComponent } from './profile/profile.component';
 import { TOASTR_TOKEN } from './toastr/toastr.service';
+import { NavComponent } from './nav/nav.component';
 
 const getLocation = (i: any) => i.get('$location');
 const getCurrentIdentity = (i:any) => i.get('currentIdentity');
@@ -28,6 +29,7 @@ const getToastr = () => toastr;
     UnreviewedTalkComponent,
     TalkDurationPipe,
     ProfileComponent,
+    NavComponent,
   ],
   providers: [
     { 

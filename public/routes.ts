@@ -10,14 +10,14 @@ angular.module('app').config(function($routeProvider) {
     requireAdmin: function(auth) {
       return auth.requireAdmin();
     },
-    userSessions: function(sessions, currentIdentity, auth) {
+    userSessions: function(sessions_v2, currentIdentity, auth) {
       return auth.requireLogin().then(function() {
-        return sessions.getSessionsByUser(currentIdentity.currentUser.id);
+        return sessions_v2.getSessionsByUser(currentIdentity.currentUser.id);
       });
     },
-    allSessions: function(sessions, auth) {
+    allSessions: function(sessions_v2, auth) {
       return auth.requireLogin().then(function() {
-        return sessions.getAllSessions();
+        return sessions_v2.getAllSessions();
       });
     },
     allUsers: function(users, auth) {

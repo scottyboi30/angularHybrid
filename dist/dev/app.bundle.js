@@ -4,198 +4,6 @@ webpackJsonp([3],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UnreviewedTalkComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(9);
-
-
-let UnreviewedTalkComponent = class UnreviewedTalkComponent {
-    constructor() {
-        this.voteYes = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* EventEmitter */]();
-        this.voteNo = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* EventEmitter */]();
-    }
-    yes() {
-        this.voteYes.emit(null);
-    }
-    no() {
-        this.voteNo.emit(null);
-    }
-};
-Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["D" /* Input */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:type", Object)
-], UnreviewedTalkComponent.prototype, "session", void 0);
-Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* Output */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:type", Object)
-], UnreviewedTalkComponent.prototype, "voteYes", void 0);
-Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* Output */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:type", Object)
-], UnreviewedTalkComponent.prototype, "voteNo", void 0);
-UnreviewedTalkComponent = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-        selector: 'unreviewedTalk',
-        template: __webpack_require__(339)
-    })
-], UnreviewedTalkComponent);
-
-
-
-/***/ }),
-
-/***/ 140:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toastr_toastr_service__ = __webpack_require__(343);
-
-
-
-let ProfileComponent = class ProfileComponent {
-    /*$location, toastr, currentIdentity*/
-    constructor($location, currentIdentity, toastr) {
-        this.$location = $location;
-        this.currentIdentity = currentIdentity;
-        this.toastr = toastr;
-    }
-    save(newProfile) {
-        this.currentIdentity.updateUser(newProfile);
-        this.toastr.success('Profile Saved!');
-    }
-    cancel() {
-        this.$location.path('/home');
-    }
-};
-ProfileComponent = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-        selector: 'profile',
-        template: __webpack_require__(341),
-    }),
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __param */])(0, Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* Inject */])('$location')),
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __param */])(1, Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* Inject */])('currentIdentity')),
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __param */])(2, Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__toastr_toastr_service__["a" /* TOASTR_TOKEN */])),
-    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:paramtypes", [Object, Object, Object])
-], ProfileComponent);
-
-
-
-/***/ }),
-
-/***/ 335:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(336);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_admin_nameParser__ = __webpack_require__(342);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_home_unreviewedTalk_component__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_profile_profile_component__ = __webpack_require__(140);
-
-
-
-//downGradeImports
-
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]).then(platformRef => {
-    //downgrades
-    angular.module('app')
-        .factory('nameParser', Object(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["c" /* downgradeInjectable */])(__WEBPACK_IMPORTED_MODULE_3__app_admin_nameParser__["a" /* NameParser */]))
-        .directive('unreviewedTalk', Object(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["b" /* downgradeComponent */])({
-        component: __WEBPACK_IMPORTED_MODULE_4__app_home_unreviewedTalk_component__["a" /* UnreviewedTalkComponent */],
-    }))
-        .directive('profile', Object(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["b" /* downgradeComponent */])({
-        component: __WEBPACK_IMPORTED_MODULE_5__app_profile_profile_component__["a" /* ProfileComponent */]
-    }));
-    const upgrade = platformRef.injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["a" /* UpgradeModule */]);
-    upgrade.bootstrap(document.documentElement, ['app']);
-    console.log('hybrid app bootstrapped');
-});
-
-
-/***/ }),
-
-/***/ 336:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(337);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(338);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_unreviewedTalk_component__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_pipes_talkDuration_pipe__ = __webpack_require__(340);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__toastr_toastr_service__ = __webpack_require__(343);
-
-
-
-
-
-
-
-
-
-
-
-const getLocation = (i) => i.get('$location');
-const getCurrentIdentity = (i) => i.get('currentIdentity');
-const getToastr = () => toastr;
-let AppModule = class AppModule {
-};
-AppModule = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["a" /* HttpClientModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["a" /* UpgradeModule */]
-        ],
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__home_unreviewedTalk_component__["a" /* UnreviewedTalkComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__shared_pipes_talkDuration_pipe__["a" /* TalkDurationPipe */],
-            __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__["a" /* ProfileComponent */],
-        ],
-        providers: [
-            {
-                provide: '$location',
-                useFactory: getLocation,
-                deps: ['$injector'],
-            },
-            { provide: 'currentIdentity',
-                useFactory: getCurrentIdentity,
-                deps: ['$injector'] },
-            { provide: __WEBPACK_IMPORTED_MODULE_10__toastr_toastr_service__["a" /* TOASTR_TOKEN */], useFactory: getToastr },
-        ],
-        bootstrap: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]
-        ],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_7__home_unreviewedTalk_component__["a" /* UnreviewedTalkComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__["a" /* ProfileComponent */],
-        ]
-    })
-], AppModule);
-
-
-
-/***/ }),
-
-/***/ 337:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* unused harmony export ɵangular_packages_common_http_http_a */
 /* unused harmony export ɵangular_packages_common_http_http_b */
 /* unused harmony export ɵangular_packages_common_http_http_c */
@@ -206,13 +14,13 @@ AppModule = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
 /* unused harmony export ɵangular_packages_common_http_http_f */
 /* unused harmony export HttpBackend */
 /* unused harmony export HttpHandler */
-/* unused harmony export HttpClient */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClient; });
 /* unused harmony export HttpHeaders */
 /* unused harmony export HTTP_INTERCEPTORS */
 /* unused harmony export JsonpClientBackend */
 /* unused harmony export JsonpInterceptor */
 /* unused harmony export HttpClientJsonpModule */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClientModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HttpClientModule; });
 /* unused harmony export HttpClientXsrfModule */
 /* unused harmony export ɵHttpInterceptingHandler */
 /* unused harmony export HttpParams */
@@ -226,8 +34,8 @@ AppModule = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
 /* unused harmony export HttpXhrBackend */
 /* unused harmony export XhrFactory */
 /* unused harmony export HttpXsrfTokenExtractor */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operators__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__(35);
@@ -2336,13 +2144,224 @@ var HttpClientJsonpModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 140:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UnreviewedTalkComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
+
+
+let UnreviewedTalkComponent = class UnreviewedTalkComponent {
+    constructor() {
+        this.voteYes = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* EventEmitter */]();
+        this.voteNo = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* EventEmitter */]();
+    }
+    yes() {
+        this.voteYes.emit(null);
+    }
+    no() {
+        this.voteNo.emit(null);
+    }
+};
+Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["D" /* Input */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:type", Object)
+], UnreviewedTalkComponent.prototype, "session", void 0);
+Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* Output */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:type", Object)
+], UnreviewedTalkComponent.prototype, "voteYes", void 0);
+Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["P" /* Output */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:type", Object)
+], UnreviewedTalkComponent.prototype, "voteNo", void 0);
+UnreviewedTalkComponent = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+        selector: 'unreviewedTalk',
+        template: __webpack_require__(340)
+    })
+], UnreviewedTalkComponent);
+
+
+
+/***/ }),
+
+/***/ 141:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toastr_toastr_service__ = __webpack_require__(142);
+
+
+
+let ProfileComponent = class ProfileComponent {
+    /*$location, toastr, currentIdentity*/
+    constructor($location, currentIdentity, toastr) {
+        this.$location = $location;
+        this.currentIdentity = currentIdentity;
+        this.toastr = toastr;
+    }
+    save(newProfile) {
+        this.currentIdentity.updateUser(newProfile);
+        this.toastr.success('Profile Saved!');
+    }
+    cancel() {
+        this.$location.path('/home');
+    }
+};
+ProfileComponent = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
+        selector: 'profile',
+        template: __webpack_require__(342),
+    }),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __param */])(0, Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* Inject */])('$location')),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __param */])(1, Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* Inject */])('currentIdentity')),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["e" /* __param */])(2, Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["z" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__toastr_toastr_service__["a" /* TOASTR_TOKEN */])),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:paramtypes", [Object, Object, Object])
+], ProfileComponent);
+
+
+
+/***/ }),
+
+/***/ 142:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(7);
+
+const TOASTR_TOKEN = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('toastr');
+/* harmony export (immutable) */ __webpack_exports__["a"] = TOASTR_TOKEN;
+
+
+
+/***/ }),
+
+/***/ 337:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_admin_nameParser__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_home_unreviewedTalk_component__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_profile_profile_component__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_sessions_sessions_service__ = __webpack_require__(345);
+
+
+
+//downGradeImports
+
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]).then(platformRef => {
+    //downgrades
+    angular.module('app')
+        .factory('nameParser', Object(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["d" /* downgradeInjectable */])(__WEBPACK_IMPORTED_MODULE_3__app_admin_nameParser__["a" /* NameParser */]))
+        .factory('sessions_v2', Object(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["d" /* downgradeInjectable */])(__WEBPACK_IMPORTED_MODULE_6__app_sessions_sessions_service__["a" /* Sessions */]))
+        .directive('unreviewedTalk', Object(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["c" /* downgradeComponent */])({
+        component: __WEBPACK_IMPORTED_MODULE_4__app_home_unreviewedTalk_component__["a" /* UnreviewedTalkComponent */],
+    }))
+        .directive('profile', Object(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["c" /* downgradeComponent */])({
+        component: __WEBPACK_IMPORTED_MODULE_5__app_profile_profile_component__["a" /* ProfileComponent */]
+    }));
+    const upgrade = platformRef.injector.get(__WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__["b" /* UpgradeModule */]);
+    upgrade.bootstrap(document.documentElement, ['app']);
+    console.log('hybrid app bootstrapped');
+});
+
+
+/***/ }),
+
 /***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_common_http__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_unreviewedTalk_component__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shared_pipes_talkDuration_pipe__ = __webpack_require__(341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__toastr_toastr_service__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__nav_nav_component__ = __webpack_require__(343);
+
+
+
+
+
+
+
+
+
+
+
+
+const getLocation = (i) => i.get('$location');
+const getCurrentIdentity = (i) => i.get('currentIdentity');
+const getToastr = () => toastr;
+let AppModule = class AppModule {
+};
+AppModule = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["b" /* UpgradeModule */]
+        ],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__home_unreviewedTalk_component__["a" /* UnreviewedTalkComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__shared_pipes_talkDuration_pipe__["a" /* TalkDurationPipe */],
+            __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__["a" /* ProfileComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__nav_nav_component__["a" /* NavComponent */],
+        ],
+        providers: [
+            {
+                provide: '$location',
+                useFactory: getLocation,
+                deps: ['$injector'],
+            },
+            { provide: 'currentIdentity',
+                useFactory: getCurrentIdentity,
+                deps: ['$injector'] },
+            { provide: __WEBPACK_IMPORTED_MODULE_10__toastr_toastr_service__["a" /* TOASTR_TOKEN */], useFactory: getToastr },
+        ],
+        bootstrap: [
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]
+        ],
+        entryComponents: [
+            __WEBPACK_IMPORTED_MODULE_7__home_unreviewedTalk_component__["a" /* UnreviewedTalkComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__profile_profile_component__["a" /* ProfileComponent */],
+        ]
+    })
+], AppModule);
+
+
+
+/***/ }),
+
+/***/ 339:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
 
 
 let AppComponent = class AppComponent {
@@ -2360,20 +2379,20 @@ AppComponent = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])
 
 /***/ }),
 
-/***/ 339:
+/***/ 340:
 /***/ (function(module, exports) {
 
 module.exports = "<div *ngIf=\"!!session\">\r\n  <div  class=\"panel panel-default\">\r\n    <div class=\"panel-heading\">\r\n      {{session.title}}\r\n    </div>\r\n    <div class=\"panel-body\">\r\n      <p><strong>{{session.length | talkDuration}}</strong></p>\r\n      <p>{{session.abstract}}</p>\r\n    </div>\r\n  </div>\r\n\r\n  <span>Are you interested in this session?</span>\r\n  <button class=\"btn btn-primary btn-xs\" (click)=\"yes()\">Yes</button>\r\n  <button class=\"btn btn-warning btn-xs\" (click)=\"no()\">No</button>\r\n</div>\r\n<div *ngIf=\"!session\" class=\"alert alert-success\" role=\"alert\"> \r\n  You have reviewed all the submitted sessions\r\n</div>";
 
 /***/ }),
 
-/***/ 340:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TalkDurationPipe; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
 
 
 let TalkDurationPipe = class TalkDurationPipe {
@@ -2389,20 +2408,47 @@ TalkDurationPipe = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate 
 
 /***/ }),
 
-/***/ 341:
+/***/ 342:
 /***/ (function(module, exports) {
 
 module.exports = "<app-nav></app-nav>\r\n\r\n<h1>User Profile</h1>\r\n\r\n<form class=\"form-inline\" #form=\"ngForm\">\r\n  <label for=\"firstName\">First Name</label>\r\n  <input \r\n    type=\"text\" \r\n    id=\"firstName\" placeholder=\"First Name\"\r\n    class=\"form-control\" \r\n    [ngModel]=\"currentIdentity.currentUser.firstName\"\r\n    name=\"firstName\"\r\n  >\r\n    \r\n  <label for=\"lastName\">Last Name</label>\r\n  <input \r\n    type=\"text\" \r\n    id=\"lastName\" \r\n    placeholder=\"Last Name\"\r\n    class=\"form-control\" \r\n    [ngModel]=\"currentIdentity.currentUser.lastName\"\r\n    name=\"lastName\"\r\n  >\r\n  \r\n  <br><br>\r\n  <button class=\"btn btn-primary btn-sm\" (click)=\"save(form.value)\">Save</button>\r\n  <button class=\"btn btn-warning btn-sm\" (click)=\"cancel()\">Cancel</button>\r\n</form>";
 
 /***/ }),
 
-/***/ 342:
+/***/ 343:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__ = __webpack_require__(62);
+
+
+
+let NavComponent = class NavComponent extends __WEBPACK_IMPORTED_MODULE_2__angular_upgrade_static__["a" /* UpgradeComponent */] {
+    constructor(elementRef, injector) {
+        super('nav', elementRef, injector);
+    }
+};
+NavComponent = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["s" /* Directive */])({
+        selector: 'app-nav'
+    }),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_1__angular_core__["C" /* Injector */]])
+], NavComponent);
+
+
+
+/***/ }),
+
+/***/ 344:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NameParser; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
 
 
 let NameParser = class NameParser {
@@ -2430,18 +2476,58 @@ NameParser = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
 
 /***/ }),
 
-/***/ 343:
+/***/ 345:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(9);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Sessions; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_tslib__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(139);
 
-const TOASTR_TOKEN = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('toastr');
-/* harmony export (immutable) */ __webpack_exports__["a"] = TOASTR_TOKEN;
+
+
+let Sessions = class Sessions {
+    /**
+     *
+     */
+    constructor(http) {
+        this.http = http;
+    }
+    getSessionsByUser(userId) {
+        return this.http.get('/api/sessions/user/' + userId).toPromise();
+    }
+    getAllSessions() {
+        return this.http.get('/api/sessions').toPromise();
+    }
+    createNewSession(newSession) {
+        return this.http.post('/api/sessions', newSession).toPromise();
+    }
+    getNextUnreviewedSession(userId) {
+        return this.http.get(`/api/users/${userId}/randomUnreviewedSession`).toPromise();
+    }
+    addReviewedSession(userId, sessionId) {
+        return this.http.post('/api/users/' + userId + '/reviewSession/' + sessionId, {})
+            .toPromise();
+    }
+    incrementVote(sessionId) {
+        return this.http.put('/api/sessions/' + sessionId + '/incrementVote/', {})
+            .toPromise();
+    }
+    getUnreviewedCount(userId) {
+        return this.http.get('/api/users/' + userId + '/unreviewedSessionCount').toPromise();
+    }
+};
+Sessions = Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["b" /* __decorate */])([
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])({
+        providedIn: 'root',
+    }),
+    Object(__WEBPACK_IMPORTED_MODULE_0_tslib__["d" /* __metadata */])("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
+], Sessions);
 
 
 
 /***/ })
 
-},[335]);
+},[337]);
 //# sourceMappingURL=app.bundle.js.map
