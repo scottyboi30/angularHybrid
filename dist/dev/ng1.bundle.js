@@ -1,51 +1,51 @@
 webpackJsonp([2],{
 
-/***/ 299:
+/***/ 300:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__toastr_toastr__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__toastr_toastr__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__toastr_toastr___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__toastr_toastr__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app__ = __webpack_require__(302);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__app__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes__ = __webpack_require__(303);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__routes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__admin_adminLogin__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__admin_adminLogin__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__admin_adminLogin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__admin_adminLogin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__admin_results__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__admin_results__ = __webpack_require__(306);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__admin_results___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__admin_results__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__admin_createUsers__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__admin_createUsers__ = __webpack_require__(308);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__admin_createUsers___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__admin_createUsers__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__admin_userList__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__admin_userList__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__admin_userList___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__admin_userList__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__admin_userDetails__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__admin_userDetails__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__admin_userDetails___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__admin_userDetails__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nav_nav__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nav_nav__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__nav_nav___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__nav_nav__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__security_logout__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__security_logout__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__security_logout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__security_logout__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__security_login__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__security_login__ = __webpack_require__(317);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__security_login___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__security_login__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__security_auth__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__security_auth__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__security_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__security_auth__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__security_currentIdentity__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__security_currentIdentity__ = __webpack_require__(320);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__security_currentIdentity___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__security_currentIdentity__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__security_users__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__security_users__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__security_users___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__security_users__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__home_home__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__home_home__ = __webpack_require__(322);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__home_home___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__home_home__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__home_createNewSession__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__home_createNewSession__ = __webpack_require__(324);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__home_createNewSession___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__home_createNewSession__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__sessions_sessions__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__sessions_sessions__ = __webpack_require__(326);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__sessions_sessions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__sessions_sessions__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__sessions_unreviewedSessionCount__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__sessions_unreviewedSessionCount__ = __webpack_require__(327);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__sessions_unreviewedSessionCount___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__sessions_unreviewedSessionCount__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__sessions_sessionDetail__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__sessions_sessionDetail__ = __webpack_require__(328);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__sessions_sessionDetail___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__sessions_sessionDetail__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__sessions_sessionDetailWithVotes__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__sessions_sessionDetailWithVotes__ = __webpack_require__(330);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__sessions_sessionDetailWithVotes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19__sessions_sessionDetailWithVotes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_detailPanel__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_detailPanel__ = __webpack_require__(332);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_detailPanel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20__components_detailPanel__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_zoomIn__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_zoomIn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21__components_zoomIn__);
@@ -75,7 +75,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 300:
+/***/ 301:
 /***/ (function(module, exports) {
 
 (function () {
@@ -87,7 +87,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 301:
+/***/ 302:
 /***/ (function(module, exports) {
 
 var app = angular.module('app', ['ngRoute', 'toastr']);
@@ -108,7 +108,7 @@ app.config(['$locationProvider', function ($locationProvider) {
 
 /***/ }),
 
-/***/ 302:
+/***/ 303:
 /***/ (function(module, exports) {
 
 angular.module('app').config(function ($routeProvider) {
@@ -206,11 +206,11 @@ angular.module('app').config(function ($routeProvider) {
 
 /***/ }),
 
-/***/ 303:
+/***/ 304:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('adminLogin', {
-    template: __webpack_require__(304),
+    template: __webpack_require__(305),
     bindings: {},
     controller: function ($location, currentIdentity, auth, toastr) {
         this.loggedIn = currentIdentity.authenticated();
@@ -233,18 +233,18 @@ angular.module('app').component('adminLogin', {
 
 /***/ }),
 
-/***/ 304:
+/***/ 305:
 /***/ (function(module, exports) {
 
 module.exports = "<h1>Admin Login</h1>\r\n\r\n<form class=\"form\">\r\n  <div class=\"row\">\r\n  <div class=\"form-group col-sm-6\">\r\n    <input type=\"text\" autofocus placeholder=\"Email Address\" ng-model=\"$ctrl.email\" class=\"form-control\">\r\n  </div>\r\n  </div>\r\n  <div class=\"row\">\r\n  <div class=\"form-group col-sm-6\">\r\n    <input type=\"password\" placeholder=\"Password\" ng-model=\"$ctrl.password\" class=\"form-control\">\r\n  </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-6\">\r\n    <button class=\"btn btn-primary\" ng-click=\"$ctrl.login()\">Login</button>\r\n    </div>\r\n  </div>\r\n</form>";
 
 /***/ }),
 
-/***/ 305:
+/***/ 306:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('results', {
-    template: __webpack_require__(306),
+    template: __webpack_require__(307),
     bindings: {
         sessionsByVoteDesc: '=allSessions'
     },
@@ -261,18 +261,18 @@ angular.module('app').component('results', {
 
 /***/ }),
 
-/***/ 306:
+/***/ 307:
 /***/ (function(module, exports) {
 
 module.exports = "<nav></nav>\r\n<h1>Results</h1>\r\n\r\n<session-detail-with-votes session=\"session\" ng-repeat=\"session in $ctrl.sessionsByVoteDesc\"></session-detail-with-votes>\r\n\r\n";
 
 /***/ }),
 
-/***/ 307:
+/***/ 308:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('createUsers', {
-    template: __webpack_require__(308),
+    template: __webpack_require__(309),
     bindings: {},
     controller: function (nameParser, users, toastr) {
         this.import = function () {
@@ -295,18 +295,18 @@ angular.module('app').component('createUsers', {
 
 /***/ }),
 
-/***/ 308:
+/***/ 309:
 /***/ (function(module, exports) {
 
 module.exports = "<nav></nav>\r\n\r\n<h1>Create Users</h1>\r\n<p>Enter Email Addresses here. One on each line, First and Last Name Pipe Separated</p>\r\n<textarea name=\"emailAddresses\" id=\"\" cols=\"30\" rows=\"10\" class=\"form-control\" \r\n  placeholder=\"Email Addresses\" ng-model=\"$ctrl.namesblob\"></textarea>\r\n<br>\r\n<button class=\"btn btn-primary\" ng-click=\"$ctrl.import()\">Create Users</button>\r\n";
 
 /***/ }),
 
-/***/ 309:
+/***/ 310:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('userList', {
-    template: __webpack_require__(310),
+    template: __webpack_require__(311),
     bindings: {
         users: '=allUsers'
     },
@@ -327,18 +327,18 @@ angular.module('app').component('userList', {
 
 /***/ }),
 
-/***/ 310:
+/***/ 311:
 /***/ (function(module, exports) {
 
 module.exports = "<nav></nav>\r\n<h1>User List</h1>\r\n\r\n<a ng-href=\"#/admin/users/{{user.id}}\" zoom-in \r\n  class=\"btn btn-primary btn-spaced\" \r\n  ng-repeat=\"user in $ctrl.users\">\r\n  {{user.firstName}}\r\n  {{user.lastName}}\r\n</a>\r\n";
 
 /***/ }),
 
-/***/ 311:
+/***/ 312:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('userDetails', {
-    template: __webpack_require__(312),
+    template: __webpack_require__(313),
     bindings: {
         allUsers: '='
     },
@@ -354,18 +354,18 @@ angular.module('app').component('userDetails', {
 
 /***/ }),
 
-/***/ 312:
+/***/ 313:
 /***/ (function(module, exports) {
 
 module.exports = "<nav></nav>\r\n<div class=\"jumbotron\">\r\n  <h1>{{$ctrl.user.firstName}} {{$ctrl.user.lastName}}\r\n    <span class=\"badge\" ng-show=\"$ctrl.user.isAdmin\">Admin</span>\r\n  </h1>\r\n  <p>{{$ctrl.user.email}}</p>\r\n</div>";
 
 /***/ }),
 
-/***/ 313:
+/***/ 314:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('nav', {
-    template: __webpack_require__(314),
+    template: __webpack_require__(315),
     bindings: {},
     controller: function (currentIdentity, sessions, unreviewedSessionCount) {
         this.currentUser = currentIdentity.currentUser;
@@ -377,14 +377,14 @@ angular.module('app').component('nav', {
 
 /***/ }),
 
-/***/ 314:
+/***/ 315:
 /***/ (function(module, exports) {
 
 module.exports = "<div \r\n  class=\"navbar navbar-fixed-top navbar-inverse\">\r\n  <div class=\"container\">\r\n    <div class=\"navbar-header\"><a href=\"/\" class=\"navbar-brand\">Lightning Talks</a></div>\r\n    <div class=\"navbar-collapse collapse\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li><a href=\"#/\">Home <span class=\"badge\">{{$ctrl.unreviewedSessionCount.value}}</span> </a></li>\r\n        <li><a href=\"#/createsession\">Create Session</a></li>\r\n        <li><a href=\"#/profile\">Profile</a></li>\r\n        <li><a href=\"#/admin/createusers\" ng-show=\"$ctrl.currentUser.isAdmin\">Create Users</a></li>\r\n        <li><a href=\"#/admin/results\" ng-show=\"$ctrl.currentUser.isAdmin\">Results</a></li>\r\n        <li><a href=\"#/users\" ng-show=\"$ctrl.currentUser.isAdmin\">Users</a></li>\r\n        <li><a href=\"#/logout\">Logout</a></li>\r\n      </ul>\r\n      \r\n      <ul class=\"nav navbar-right navbar nav\">\r\n        <li class=\"navbar-text\">\r\n          Welcome {{$ctrl.currentUser.firstName}} {{$ctrl.currentUser.lastName}}\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
 
 /***/ }),
 
-/***/ 315:
+/***/ 316:
 /***/ (function(module, exports) {
 
 angular.module('app').component('logout', {
@@ -397,11 +397,11 @@ angular.module('app').component('logout', {
 
 /***/ }),
 
-/***/ 316:
+/***/ 317:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('login', {
-    template: __webpack_require__(317),
+    template: __webpack_require__(318),
     bindings: {},
     controller: class LoginCtrl {
         constructor($location, currentIdentity, auth, toastr) {
@@ -428,14 +428,14 @@ angular.module('app').component('login', {
 
 /***/ }),
 
-/***/ 317:
+/***/ 318:
 /***/ (function(module, exports) {
 
 module.exports = "<h1>Please Login</h1>\r\n\r\n<p>Enter your attendee email address</p>\r\n<form class=\"form\">\r\n  <div class=\"row\">\r\n    <div class=\"form-group col-sm-6\">\r\n      <input type=\"text\" autofocus placeholder=\"Email Address\" ng-model=\"$ctrl.email\" class=\"form-control\">\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-6\">\r\n      <button class=\"btn btn-primary\" ng-click=\"$ctrl.login()\">Login</button>\r\n    </div>\r\n  </div>\r\n</form>";
 
 /***/ }),
 
-/***/ 318:
+/***/ 319:
 /***/ (function(module, exports) {
 
 angular.module('app').service('auth', class Auth {
@@ -499,7 +499,7 @@ angular.module('app').service('auth', class Auth {
 
 /***/ }),
 
-/***/ 319:
+/***/ 320:
 /***/ (function(module, exports) {
 
 angular.module('app').service('currentIdentity', class CurrentIdentity {
@@ -533,7 +533,7 @@ angular.module('app').service('currentIdentity', class CurrentIdentity {
 
 /***/ }),
 
-/***/ 320:
+/***/ 321:
 /***/ (function(module, exports) {
 
 angular.module('app').service('users', class Users {
@@ -556,11 +556,11 @@ angular.module('app').service('users', class Users {
 
 /***/ }),
 
-/***/ 321:
+/***/ 322:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('home', {
-    template: __webpack_require__(322),
+    template: __webpack_require__(323),
     bindings: {
         userSessions: '='
     },
@@ -595,18 +595,18 @@ angular.module('app').component('home', {
 
 /***/ }),
 
-/***/ 322:
+/***/ 323:
 /***/ (function(module, exports) {
 
 module.exports = "<nav></nav>\r\n\r\n<h2 style=\"margin-top:30px\">Unreviewed Sessions</h2>\r\n<unreviewed-talk [session]=\"$ctrl.currentSessionToReview\" (vote-no)=\"$ctrl.voteNo()\" (vote-yes)=\"$ctrl.voteYes()\"></unreviewed-talk>\r\n<hr style=\"margin-top:20px\">\r\n<h3>Your Sessions\r\n<a zoom-in class=\"btn btn-primary btn-xs\" href=\"#/createsession\">Create a New Session</a>\r\n</h3>\r\n\r\n<div ng-repeat=\"session in $ctrl.userSessions\">\r\n  <session-detail session=\"session\" initial-collapsed=\"true\"></session-detail>\r\n</div>\r\n";
 
 /***/ }),
 
-/***/ 323:
+/***/ 324:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('createNewSession', {
-    template: __webpack_require__(324),
+    template: __webpack_require__(325),
     bindings: {
         userSessions: '='
     },
@@ -630,14 +630,14 @@ angular.module('app').component('createNewSession', {
 
 /***/ }),
 
-/***/ 324:
+/***/ 325:
 /***/ (function(module, exports) {
 
 module.exports = "<nav></nav>\r\n\r\n<h1>Create New Session</h1>\r\n\r\n<form class=\"form\">\r\n  <div class=\"form-group\">\r\n    Give your session a title\r\n    <input required type=\"text\" placeholder=\"Title\" ng-model=\"$ctrl.title\" class=\"form-control\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    Enter a length, from 2 minutes to 30 minutes\r\n    <input required type=\"number\" placeholder=\"Length in Minutes\" \r\n      ng-model=\"$ctrl.length\" class=\"form-control\" min=\"2\" max=\"30\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    Describe your session\r\n    <textarea required name=\"\" id=\"\" cols=\"30\" rows=\"4\" \r\n      ng-model=\"$ctrl.abstract\" class=\"form-control\"\r\n      placeholder=\"Abstract\"></textarea>\r\n  </div>\r\n  \r\n  <div class=\"row\">\r\n    <div class=\"col-sm-3\">\r\n      <button class=\" btn btn-primary btn-sm\" ng-click=\"$ctrl.create()\">Create</button>\r\n    </div>\r\n  </div>\r\n</form>\r\n\r\n<h2>Your Other Sessions</h2>\r\n<div ng-repeat=\"session in $ctrl.userSessions\">\r\n  <session-detail session=\"session\" initial-collapsed=\"false\"></session-detail>\r\n</div>";
 
 /***/ }),
 
-/***/ 325:
+/***/ 326:
 /***/ (function(module, exports) {
 
 angular.module('app').service('sessions', class Sessions {
@@ -683,7 +683,7 @@ angular.module('app').service('sessions', class Sessions {
 
 /***/ }),
 
-/***/ 326:
+/***/ 327:
 /***/ (function(module, exports) {
 
 angular.module('app').service('unreviewedSessionCount', class UnreviewedSessionCount {
@@ -703,11 +703,11 @@ angular.module('app').service('unreviewedSessionCount', class UnreviewedSessionC
 
 /***/ }),
 
-/***/ 327:
+/***/ 328:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('sessionDetail', {
-    template: __webpack_require__(328),
+    template: __webpack_require__(329),
     bindings: {
         session: '=',
         initialCollapsed: '@'
@@ -719,18 +719,18 @@ angular.module('app').component('sessionDetail', {
 
 /***/ }),
 
-/***/ 328:
+/***/ 329:
 /***/ (function(module, exports) {
 
 module.exports = "<detail-panel collapsed=\"{{$ctrl.initialCollapsed}}\" title=\"{{$ctrl.session.title}}\">\r\n  <strong>{{$ctrl.session.length | talkDuration}}</strong>\r\n  <p><small>{{$ctrl.session.abstract}}</small></p>  \r\n</detail-panel>\r\n";
 
 /***/ }),
 
-/***/ 329:
+/***/ 330:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('sessionDetailWithVotes', {
-    template: __webpack_require__(330),
+    template: __webpack_require__(331),
     bindings: {
         session: '=',
         initialCollapsed: '@'
@@ -742,19 +742,19 @@ angular.module('app').component('sessionDetailWithVotes', {
 
 /***/ }),
 
-/***/ 330:
+/***/ 331:
 /***/ (function(module, exports) {
 
 module.exports = "<detail-panel collapsed=\"{{$ctrl.initialCollapsed}}\" title=\"{{$ctrl.session.title}}\">\r\n  <strong>{{$ctrl.session.voteCount}} votes</strong>\r\n  <p>{{$ctrl.session.length | talkDuration}}</p>\r\n  <p><small>{{$ctrl.session.abstract}}</small></p>  \r\n</detail-panel>\r\n";
 
 /***/ }),
 
-/***/ 331:
+/***/ 332:
 /***/ (function(module, exports, __webpack_require__) {
 
 angular.module('app').component('detailPanel', {
     transclude: true,
-    template: __webpack_require__(332),
+    template: __webpack_require__(333),
     bindings: {
         title: '@',
         initialCollapsed: '@collapsed'
@@ -770,7 +770,7 @@ angular.module('app').component('detailPanel', {
 
 /***/ }),
 
-/***/ 332:
+/***/ 333:
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"panel panel-primary\">\r\n  <div class=\"panel-heading pointable\" ng-click=\"$ctrl.collapse()\">\r\n    <span>{{$ctrl.title}}</span>\r\n  </div>\r\n  <div class=\"panel-body\" ng-hide=\"$ctrl.collapsed\" ng-transclude>\r\n  </div>\r\n</div>";
@@ -797,5 +797,5 @@ angular.module('app').directive('zoomIn', function () {
 
 /***/ })
 
-},[299]);
+},[300]);
 //# sourceMappingURL=ng1.bundle.js.map

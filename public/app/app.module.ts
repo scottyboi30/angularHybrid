@@ -10,10 +10,11 @@ import { AppComponent } from "./app.component";
 import { UnreviewedTalkComponent} from "./home/unreviewedTalk.component";
 import { TalkDurationPipe } from './shared/pipes/talkDuration.pipe';
 import { ProfileComponent } from './profile/profile.component';
+import { TOASTR_TOKEN } from './toastr/toastr.service';
 
-function getLocation(i: any) {
-  return i.get('$location')
-}
+const getLocation = (i: any) => i.get('$location');
+const getCurrentIdentity = (i:any) => i.get('currentIdentity');
+const getToastr = () => toastr;
 
 @NgModule({
   imports: [
@@ -33,7 +34,11 @@ function getLocation(i: any) {
       provide: '$location',
       useFactory: getLocation,
       deps: ['$injector'],
-    }
+    },
+    { provide: 'currentIdentity',
+      useFactory: getCurrentIdentity,
+      deps: ['$injector']},
+    { provide: TOASTR_TOKEN, useFactory: getToastr },
   ],
   bootstrap: [
     AppComponent
