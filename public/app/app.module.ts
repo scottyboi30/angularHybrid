@@ -7,7 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 
-import { UnreviewedTalkComponent} from "./home/unreviewedTalk.component";
+import { UnreviewedTalkComponent } from "./home/unreviewedTalk.component";
 import { TalkDurationPipe } from './shared/pipes/talkDuration.pipe';
 import { ProfileComponent } from './profile/profile.component';
 import { TOASTR_TOKEN } from './toastr/toastr.service';
@@ -16,10 +16,13 @@ import { DetailPanelComponent } from './shared/detailPanel.component';
 import { ResultsComponent } from './admin/results.component';
 import { SessionDetailWithVotesComponent } from './sessions/sessionDetailWithVotes.component';
 import { UrlHandlingStrategy, UrlTree, RouterModule } from '@angular/router';
+import { AllSessionsResolver } from './sessions/allSessions.resolver';
+import { AdminGuard } from './admin/admin.guard';
 
 const getLocation = (i: any) => i.get('$location');
-const getCurrentIdentity = (i:any) => i.get('currentIdentity');
+const getCurrentIdentity = (i: any) => i.get('currentIdentity');
 const getToastr = () => toastr;
+const getAuth = (i: any) => i.get('auth');
 
 class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url: UrlTree): boolean {
@@ -36,8 +39,12 @@ class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
     HttpClientModule,
     UpgradeModule,
     RouterModule.forRoot([
-      { path: 'admin/results', component: ResultsComponent }
-    ], {useHash: true})
+      {
+        path: 'admin/results', component: ResultsComponent,
+        resolve: { sessions: AllSessionsResolver },
+        canActivate: [AdminGuard]
+      }
+    ], { useHash: true })
   ],
   declarations: [
     AppComponent,
@@ -50,17 +57,26 @@ class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
     SessionDetailWithVotesComponent,
   ],
   providers: [
-    { 
+    AllSessionsResolver,
+    AdminGuard,
+    {
       provide: '$location',
       useFactory: getLocation,
       deps: ['$injector'],
     },
-    { provide: 'currentIdentity',
+    {
+      provide: 'currentIdentity',
       useFactory: getCurrentIdentity,
-      deps: ['$injector']},
+      deps: ['$injector']
+    },
+    {
+      provide: 'auth',
+      useFactory: getAuth,
+      deps: ['$injector']
+    },
     { provide: TOASTR_TOKEN, useFactory: getToastr },
     { provide: UrlHandlingStrategy, useClass: Ng1Ng2UrlHandlingStrategy },
-    { provide: '$scope', useExisting: '$rootScope'},
+    { provide: '$scope', useExisting: '$rootScope' },
   ],
   bootstrap: [
     AppComponent
@@ -72,4 +88,4 @@ class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
     ResultsComponent,
   ]
 })
-export class AppModule {}
+export class AppModule { }

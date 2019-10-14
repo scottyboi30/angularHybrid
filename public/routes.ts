@@ -1,33 +1,28 @@
 
-angular.module('app').config(function($routeProvider) {
+angular.module('app').config(function ($routeProvider) {
   var routeResolvers = {
-    loggedIn: function(auth) {
+    loggedIn: function (auth) {
       return auth.requireLogin();
     },
-    waitForAuth: function(auth) {
+    waitForAuth: function (auth) {
       return auth.waitForAuth();
     },
-    requireAdmin: function(auth) {
+    requireAdmin: function (auth) {
       return auth.requireAdmin();
     },
-    userSessions: function(sessions_v2, currentIdentity, auth) {
-      return auth.requireLogin().then(function() {
+    userSessions: function (sessions_v2, currentIdentity, auth) {
+      return auth.requireLogin().then(function () {
         return sessions_v2.getSessionsByUser(currentIdentity.currentUser.id);
       });
     },
-    allSessions: function(sessions_v2, auth) {
-      return auth.requireLogin().then(function() {
-        return sessions_v2.getAllSessions();
-      });
-    },
-    allUsers: function(users, auth) {
-      return auth.requireLogin().then(function() {
+    allUsers: function (users, auth) {
+      return auth.requireLogin().then(function () {
         return users.getAllUsers();
       });
     }
-    
+
   }
-  
+
   $routeProvider
     .when('/admin/login', {
       template: '<admin-login></admin-login>',
@@ -35,13 +30,6 @@ angular.module('app').config(function($routeProvider) {
         currentAuth: routeResolvers.waitForAuth
       }
     })
-    // .when('/admin/results', {
-    //   template: '<results [all-sessions]="$resolve.allSessions"></results>',
-    //   resolve: {
-    //     admin: routeResolvers.requireAdmin,
-    //     allSessions: routeResolvers.allSessions
-    //   }
-    // })
     .when('/admin/users/:id', {
       template: '<user-details all-users="$resolve.allUsers"></user-details>',
       resolve: {
@@ -58,14 +46,14 @@ angular.module('app').config(function($routeProvider) {
     })
     .when('/admin/createusers', {
       template: '<create-users></create-users>',
-      resolve:  {
+      resolve: {
         admin: routeResolvers.requireAdmin
       }
     })
     .when('/home', {
       template: '<home user-sessions="$resolve.userSessions"></home>',
       resolve: {
-        login:routeResolvers.loggedIn,
+        login: routeResolvers.loggedIn,
         userSessions: routeResolvers.userSessions
       }
     })
